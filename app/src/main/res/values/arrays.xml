@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="headlines">
+        <item>headline-1</item>
+        <item>headline-12</item>
+        <item>headline-31</item>
+        <item>headline-14</item>
+        <item>headline-15</item>
+        <item>headline-61</item>
+        <item>headline-17</item>
+        <item>headline-81</item>
+        <item>headline-19</item>
+    </string-array>
+</resources>
