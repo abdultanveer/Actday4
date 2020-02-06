@@ -20,9 +20,18 @@ import android.widget.Toast;
 public class HeadlinesFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     ListView listView;
+    OnHeadlineSelectedListener callback;
+
+    public void setOnHeadlineSelectedListener(OnHeadlineSelectedListener callback) {
+        this.callback = callback;
+    }
 
     public HeadlinesFragment() {
         // Required empty public constructor
+    }
+
+    public interface OnHeadlineSelectedListener {
+        public void onArticleSelected(CharSequence position);
     }
 
     @Override
@@ -43,6 +52,7 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         Toast.makeText(getActivity(), (CharSequence) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+        callback.onArticleSelected((CharSequence) adapterView.getItemAtPosition(position));
 
     }
 }
